@@ -1,7 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
-import { terser } from 'rollup-plugin-terser'
-import compiler from '@ampproject/rollup-plugin-closure-compiler'
+import terser from '@rollup/plugin-terser'
 import { default as importHTTP } from 'import-http/rollup.js'
 import babel from '@rollup/plugin-babel'
 
@@ -50,7 +49,6 @@ const prod = {
         ["@babel/env"]
       ]
     }),
-    compiler(),
     terser(),
   ]
 }
